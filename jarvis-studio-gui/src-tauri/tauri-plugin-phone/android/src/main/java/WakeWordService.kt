@@ -289,8 +289,8 @@ class WakeWordService : Service() {
         }
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(applicationInfo.icon)
-            .setContentTitle("JARVIS is listening")
-            .setContentText("Say “Hey Jarvis” any time — tap Stop to turn this off")
+            .setContentTitle("ASTRA is listening")
+            .setContentText("Say “Hey Astra” any time — tap Stop to turn this off")
             .setOngoing(true)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .apply { if (contentPending != null) setContentIntent(contentPending) }
@@ -305,7 +305,7 @@ class WakeWordService : Service() {
                 CHANNEL_ID,
                 "Wake word listening",
                 NotificationManager.IMPORTANCE_LOW,
-            ).apply { description = "Shown while JARVIS is listening for \"Hey Jarvis\"." }
+            ).apply { description = "Shown while ASTRA is listening for \"Hey Astra\"." }
             nm.createNotificationChannel(channel)
         }
     }
